@@ -1,0 +1,278 @@
+.upload-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 0 32px;
+  color: #183638;
+}
+
+.upload-page-heading {
+  margin-bottom: 28px;
+}
+
+.upload-eyebrow {
+  color: #0d9488;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+}
+
+.upload-page-heading h1 {
+  margin: 10px 0;
+  font-size: clamp(26px, 4vw, 34px);
+  letter-spacing: -1px;
+}
+
+.upload-page-heading p {
+  margin: 0;
+  color: #718487;
+  line-height: 1.7;
+}
+
+.upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 310px;
+  padding: 36px 24px;
+  text-align: center;
+  border: 1.5px dashed #a8ceca;
+  border-radius: 22px;
+  background: #f7fbfa;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.upload-zone-active {
+  border-color: #0d9488;
+  background: #eaf8f6;
+}
+
+.upload-zone-icon {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  color: #0d9488;
+  background: #e1f5f1;
+}
+
+.upload-zone h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.upload-zone > p {
+  max-width: 440px;
+  margin: 0 0 22px;
+  color: #718487;
+  line-height: 1.7;
+}
+
+.upload-select-button,
+.upload-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  background: #087f78;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.upload-select-button:hover,
+.upload-submit-button:hover {
+  background: #066760;
+}
+
+.upload-select-button:disabled,
+.upload-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-zone-hint {
+  margin-top: 18px;
+  color: #809395;
+  font-size: 12px;
+}
+
+.upload-selected-files {
+  margin-top: 26px;
+  padding: 24px;
+  border: 1px solid #e1ebea;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.upload-files-heading h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.upload-files-heading p {
+  margin: 0 0 18px;
+  color: #718487;
+  font-size: 13px;
+}
+
+.upload-file-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf2f1;
+}
+
+.upload-file-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  color: #087f78;
+  background: #eaf7f5;
+}
+
+.upload-file-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.upload-file-info strong {
+  overflow-wrap: anywhere;
+  font-size: 13px;
+}
+
+.upload-file-info span {
+  color: #718487;
+  font-size: 12px;
+}
+
+.upload-remove-button {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 10px;
+  color: #75898a;
+  background: #f3f7f6;
+  cursor: pointer;
+}
+
+.upload-progress {
+  margin: 22px 0;
+}
+
+.upload-progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  color: #526b6d;
+  font-size: 13px;
+}
+
+.upload-progress-track {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e7f0ef;
+}
+
+.upload-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #0d9488;
+  transition: width 0.2s ease;
+}
+
+.upload-submit-button {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.upload-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 15px 18px;
+  border-radius: 13px;
+}
+
+.upload-feedback p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.upload-success {
+  color: #087f58;
+  background: #eaf8f0;
+}
+
+.upload-error {
+  color: #b42318;
+  background: #fff0ee;
+}
+
+.upload-privacy-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #e4edec;
+  border-radius: 14px;
+  color: #637a7c;
+  background: #fff;
+}
+
+.upload-privacy-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.upload-privacy-note p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .upload-page {
+    padding-top: 4px;
+  }
+
+  .upload-page-heading {
+    margin-bottom: 20px;
+  }
+
+  .upload-zone {
+    min-height: 280px;
+    padding: 28px 16px;
+    border-radius: 18px;
+  }
+
+  .upload-zone h2 {
+    font-size: 18px;
+  }
+
+  .upload-selected-files {
+    padding: 17px;
+  }
+}

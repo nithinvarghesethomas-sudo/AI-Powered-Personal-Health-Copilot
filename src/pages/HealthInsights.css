@@ -1,0 +1,239 @@
+
+/* ========================================
+   HEALTH INSIGHTS — PREMIUM UI
+======================================== */
+
+.page-content {
+  animation: insightsFadeIn 0.45s ease both;
+}
+
+.page-heading {
+  margin-bottom: 26px;
+}
+
+.page-heading h1 {
+  max-width: 720px;
+  margin-top: 12px;
+  color: #173b43;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 750;
+  letter-spacing: -1.4px;
+  line-height: 1.2;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #168b83;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #20b8a6;
+  box-shadow: 0 0 0 4px rgba(32, 184, 166, 0.12);
+}
+
+/* Health companion intro panel */
+
+.page-content .panel {
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  border: 1px solid #dcefeb;
+  border-radius: 22px;
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      rgba(103, 219, 198, 0.19),
+      transparent 35%
+    ),
+    linear-gradient(125deg, #ffffff 0%, #f2fbf9 100%);
+  box-shadow: 0 8px 28px rgba(26, 91, 85, 0.055);
+}
+
+.page-content .panel::after {
+  content: "";
+  position: absolute;
+  right: -32px;
+  bottom: -65px;
+  width: 165px;
+  height: 165px;
+  border: 1px solid rgba(31, 159, 144, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.welcome-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #14877e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.page-content .panel .muted-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0;
+  color: #607b80;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* Insight cards */
+
+.page-content .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.page-content .metric-card {
+  position: relative;
+  min-width: 0;
+  padding: 25px;
+  overflow: hidden;
+  border: 1px solid #e0ece9;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(25, 74, 70, 0.035);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.page-content .metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #20b8a6, #8ce2d1);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.page-content .metric-card:hover {
+  transform: translateY(-5px);
+  border-color: #bde6dd;
+  box-shadow: 0 15px 34px rgba(25, 106, 95, 0.09);
+}
+
+.page-content .metric-card:hover::before {
+  opacity: 1;
+}
+
+.page-content .metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-content .metric-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #d2f0e9;
+  border-radius: 15px;
+  background: #eaf9f5;
+  color: #148d80;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.page-content .metric-card:hover .metric-icon {
+  transform: scale(1.06);
+  background: #d9f5ed;
+}
+
+.page-content .metric-label {
+  color: #21464b;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: -0.3px;
+}
+
+.page-content .metric-note {
+  color: #70868a;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+  .page-content .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .page-heading {
+    margin-bottom: 20px;
+  }
+
+  .page-heading h1 {
+    font-size: 29px;
+    letter-spacing: -0.8px;
+  }
+
+  .page-content .panel {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .page-content .panel .muted-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .page-content .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 18px !important;
+  }
+
+  .page-content .metric-card {
+    padding: 22px;
+    border-radius: 17px;
+  }
+
+  .page-content .metric-label {
+    font-size: 16px;
+  }
+}
+
+@keyframes insightsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-content,
+  .page-content .metric-card,
+  .page-content .metric-icon {
+    animation: none;
+    transition: none;
+  }
+}

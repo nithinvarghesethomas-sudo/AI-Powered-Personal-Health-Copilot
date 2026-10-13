@@ -1,0 +1,164 @@
+/* ======================================
+   TOPBAR — HEALTH COPILOT
+====================================== */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-height: 86px;
+  padding: 16px 34px;
+  border-bottom: 1px solid #e8edf5;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar-title {
+  min-width: 0;
+}
+
+.topbar-title h2 {
+  overflow: hidden;
+  margin: 0;
+  color: #17233b;
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.45px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-title p {
+  overflow: hidden;
+  margin: 5px 0 0;
+  color: #8491a5;
+  font-size: 12px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.topbar-icon-button,
+.topbar-profile-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e5eaf2;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #617087;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.topbar-icon-button:hover,
+.topbar-profile-button:hover {
+  border-color: #cddcff;
+  background: #f1f5ff;
+  color: #3563e9;
+}
+
+.topbar-profile-button {
+  border-color: #dce7fb;
+  background: #edf3ff;
+  color: #3563e9;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .topbar {
+    min-height: 72px;
+    gap: 12px;
+    padding: 12px 15px;
+  }
+
+  .topbar-title h2 {
+    font-size: 16px;
+  }
+
+  .topbar-title p {
+    max-width: 210px;
+    font-size: 10px;
+  }
+
+  .topbar-actions {
+    gap: 7px;
+  }
+
+  .topbar-icon-button,
+  .topbar-profile-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+
+  .topbar-icon-button svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .topbar-profile-button svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar-title p {
+    display: none;
+  }
+
+  .topbar-actions {
+    gap: 5px;
+  }
+}
+
+/* Mobile navigation menu button */
+
+.topbar-menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5eaf2;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #34445e;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .topbar-menu-button {
+    display: inline-flex;
+  }
+
+  .topbar-left {
+    gap: 12px;
+  }
+}
